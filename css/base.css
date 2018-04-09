@@ -363,6 +363,22 @@ a.demo--current {
 	white-space: pre-line;
 	padding-bottom: 2px; 
 	border-bottom: 2px solid #E0E0E0;
+	line-height: 1.5;
+	font-weight: 500;
+}
+
+.listIcon{
+	color: #c0c0c0;
+	font-weight: bold;
+	font-size: 18px;
+}
+ulIcon{
+	padding-bottom: 2px; 
+	border-bottom: 2px solid #E0E0E0;
+	list-style-type: square;
+}
+liIcon{
+	list-style-type: none !important;
 }
 
 .grid__item:nth-child(odd) {
