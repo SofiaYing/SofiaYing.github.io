@@ -11,6 +11,8 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
 	<link rel="stylesheet" type="text/css" href="css/uncover.css" />
+	<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>  
+	<!-- 利用polyfill 解决了IntersectionObserver（用来监视可视区域）的兼容性问题 -->
 	<script>
 		document.documentElement.className = "js";
 		var supportsCssVars = function () {
