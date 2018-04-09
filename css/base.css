@@ -324,6 +324,7 @@ a.demo--current {
 	display: grid;
 	grid-row-gap: 20vh;
 	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 100px;
 }
 
 .grid__item {
