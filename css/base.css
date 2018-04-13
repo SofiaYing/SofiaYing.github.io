@@ -25,7 +25,7 @@ body {
 /* Color schemes */
 .demo-1 {
 	--color-text: #333;
-	/* --color-bg: #000; */
+	--color-bg: white;
 	--color-link: #aaa;
 	--color-link-hover: #333;
 	--color-info: #7239c0;
