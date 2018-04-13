@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::berfor,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-wrapper{
+  padding: 130px 10px 10px;
+  height: 50%;
+}
+.preview-wrapper{
+  height: 50%;
+}
+#code{
+  overflow: hidden;
+  height: 100%;
+}
+.preview{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: 100%;
+  min-width: 390px;
+  height: 250px;
+  position: relative;
+  background: #FFF090;
+  padding: 35px;
+  border-radius: 50%;
+  margin: auto; 
+}
