@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Inspiration for modern menu hover effects." />
-		<meta name="keywords" content="menu, navigation, hover, effect, animation, javascript, css, web design" />
-		
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Nunito:400,700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/note-normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/note-base.css" />
-		<link rel="stylesheet" type="text/css" href="css/note-style.css" />
-		
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>		
-	</head>
-	<body class="demo-adsila">
-		<svg class="hidden">
-			<symbol id="home" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-				<title>home</title>
-				<path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
-			</symbol>
-			<symbol id="icon-github" viewBox="0 0 32.6 31.8">
-				<title>github</title>
-				<path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"/>
-			</symbol>
-			
-		</svg>
-		<main>
-			<div class="content content--fixed">
-				<header class="codrops-header">
-					<div class="codrops-links">
-						<a class="codrops-icon codrops-icon--prev" href="index.html" title="Previous Demo">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Inspiration for modern menu hover effects." />
+	<meta name="keywords" content="menu, navigation, hover, effect, animation, javascript, css, web design" />
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Nunito:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/note-normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/note-base.css" />
+	<link rel="stylesheet" type="text/css" href="css/note-style.css" />
+
+	<script>
+		document.documentElement.className = "js";
+		var supportsCssVars = function () {
+			var e, t = document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports &&
+				window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+		};
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+</head>
+
+<body class="demo-adsila">
+	<svg class="hidden">
+		<symbol id="home" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+			<title>home</title>
+			<path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+		</symbol>
+		<symbol id="icon-github" viewBox="0 0 32.6 31.8">
+			<title>github</title>
+			<path d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4C7.4,10.7,6.8,9,7.7,6.8c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C32.6,7.3,25.3,0,16.3,0z"
+			/>
+		</symbol>
+
+	</svg>
+	<main>
+		<div class="content content--fixed">
+			<header class="codrops-header">
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="index.html" title="Previous Demo">
 						<svg class="icon icon--arrow">
 							<use xlink:href="#home"></use>
 						</svg>
 					</a>
 
-					</div>
-					<nav class="demos">
-						<a class="demo demo--current" href="note.html"><span>前端技术</span></a>
-						<a class="demo" href="about.html"><span>关于我</span></a>
-					</nav>
-				</header>
-				<a class="github" href="https://github.com/SofiaYing" title="Find this project on GitHub"><svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg></a>
-				
-			
-			</div>
-			<section class="content">
-				<nav class="menu menu--adsila">
-					<a class="menu__item" href="JS-task/visible-sort/visible-sort.html">
-						<span class="menu__item-name">visible-js-sort</span>
-						<span class="menu__item-label">一个简单可视的排序算法demo</span>
+				</div>
+				<nav class="demos">
+					<a class="demo demo--current" href="note.html">
+						<span>前端技术</span>
 					</a>
-					<a class="menu__item" href="#">
-						<span class="menu__item-name">Exhibitions</span>
-						<span class="menu__item-label">Discover their stories</span>
+					<a class="demo" href="about.html">
+						<span>关于我</span>
 					</a>
-					<!-- <a class="menu__item" href="#">
-						<span class="menu__item-name">Schedule</span>
-						<span class="menu__item-label">View our event calendar</span>
-					</a>
-					<a class="menu__item" href="#">
-						<span class="menu__item-name">Mission</span>
-						<span class="menu__item-label">Read our mission statement</span>
-					</a>
-					<a class="menu__item" href="#">
-						<span class="menu__item-name">The Gardens</span>
-						<span class="menu__item-label">Get to know our eco village</span>
-					</a>
-					<a class="menu__item" href="#">
-						<span class="menu__item-name">Buy Tickets</span>
-						<span class="menu__item-label">Purchase event tickets online</span>
-					</a>
-					<a class="menu__item" href="#">
-						<span class="menu__item-name">Contact</span>
-						<span class="menu__item-label">Get in touch and find us</span>
-					</a> -->
 				</nav>
-			</section>
-		</main>
-		<script src="js/note.js"></script>
-	</body>
+			</header>
+			<a class="github" href="https://github.com/SofiaYing" title="Find this project on GitHub">
+				<svg class="icon icon--github">
+					<use xlink:href="#icon-github"></use>
+				</svg>
+			</a>
+
+
+		</div>
+		<section class="content">
+			<nav class="menu menu--adsila">
+				<a class="menu__item" href="https://github.com/SofiaYing/Note/wiki">
+					<span class="menu__item-name">note</span>
+					<span class="menu__item-label">前端基础知识笔记</span>
+				</a>
+				<a class="menu__item" href="JS-task/visible-sort/visible-sort.html">
+					<span class="menu__item-name">visible-js-sort</span>
+					<span class="menu__item-label">一个简单可视的排序算法demo</span>
+				</a>
+				<a class="menu__item" href="JS-task//taobao/index.html">
+					<span class="menu__item-name">taobao</span>
+					<span class="menu__item-label">淘宝首页的静态仿站</span>
+				</a>
+			</nav>
+		</section>
+	</main>
+	<script src="js/note.js"></script>
+</body>
+
 </html>
