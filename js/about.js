@@ -1,15 +1,5 @@
-/**
- * demo3.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2018, Codrops
- * http://www.codrops.com
- */
 {
-    // the settings for each one of the slides uncover instances.
+    // 每个slice实例设置
     const uncoverOpts = [
         {
             // total number of slices.
@@ -40,34 +30,10 @@
             slicesOrigin: {show: 'bottom', hide: 'bottom'}
         },
         {
-            slicesTotal: 16,
+            slicesTotal: 12,
             slicesColor: '#fff',
             orientation: 'vertical',
             slicesOrigin: {show: 'bottom', hide: 'bottom'}
-        },
-        {
-            slicesTotal: 4,
-            slicesColor: '#fff',
-            orientation: 'horizontal',
-            slicesOrigin: {show: 'left', hide: 'left'}
-        },
-        {
-            slicesTotal: 10,
-            slicesColor: '#fff',
-            orientation: 'vertical',
-            slicesOrigin: {show: 'top', hide: 'top'}
-        },
-        {
-            slicesTotal: 8,
-            slicesColor: '#d60b3f',
-            orientation: 'horizontal',
-            slicesOrigin: {show: 'right', hide: 'right'}
-        },
-        {
-            slicesTotal: 6,
-            slicesColor: '#250bd6',
-            orientation: 'vertical',
-            slicesOrigin: {show: 'top', hide: 'top'}
         }
     ];
 
@@ -178,7 +144,7 @@
     
     let uncoverArr = [];
 
-    imagesLoaded(document.querySelectorAll('.slide__img'), {background: true}, () => {
+    imagesLoaded(document.querySelectorAll('.scroll-img'),() => {
         document.body.classList.remove('loading');
 
         items.forEach((item, pos) => {
