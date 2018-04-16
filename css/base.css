@@ -160,6 +160,20 @@ main {
 	'... ...'
 	'github pagination';
 }
+.note-content--fixed {
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	display: block;
+	align-content: space-between;
+	width: 100%;
+	max-width: none;
+	min-height: 0;
+	height: 100vh;
+	padding: 1.5rem;
+	pointer-events: none;
+}
 
 .content--fixed a {
 	pointer-events: auto;

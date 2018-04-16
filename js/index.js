@@ -1,3 +1,4 @@
+
 !function(){
   function writeCode(prefix,code,fn){
     //前缀，代码，回调
