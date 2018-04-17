@@ -127,15 +127,25 @@
 
 var audio = document.getElementsByTagName("audio")[0];
 
+// 兼容移动端touchstart和touchend
 if(/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)){
-  $('.wrapper').touchstart(function() {
-    audio.currentTime = 0.5;
-    audio.play();
-    $('.blink').css('visibility', 'visible');
-    $('.eye-left').css('visibility', 'hidden');
-  });
-  
-  $('.wrapper').touchend(function() {
+  $('.wrapper').on(
+    'touchstart',
+    function(e) {
+      e.preventDefault();
+      audio.currentTime = 0.5;
+      audio.play();
+      $('.blink').css('visibility', 'visible');
+      $('.eye-left').css('visibility', 'hidden');
+    }
+  );
+  $('.wrapper').on('touchend',function(e) {
+    if (e.cancelable) {
+      // 判断默认行为是否已经被禁用
+      if (!e.defaultPrevented) {
+          e.preventDefault();
+      }
+    }
     audio.pause();
     audio.currentTime = 0.5;
     $('.blink').css('visibility', 'hidden');
