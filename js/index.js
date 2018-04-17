@@ -125,24 +125,44 @@
   writeCode('',code);
 }.call()
 
-$('.wrapper').mouseover(function() {
-  $('.blink').css('visibility', 'visible');
-  $('.eye-left').css('visibility', 'hidden');
-});
-
-$('.wrapper').mouseout(function() {
-  $('.blink').css('visibility', 'hidden');
-  $('.eye-left').css('visibility', 'visible');
-});
-
-
 var audio = document.getElementsByTagName("audio")[0];
-$(".wrapper").mouseover(function() {
-audio.currentTime = 0.5;
-  audio.play();
-});
 
-$(".wrapper").mouseout(function() {
-  audio.pause();
-  audio.currentTime = 0.5;
-})
+if(/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)){
+  $('.wrapper').touchstart(function() {
+    audio.currentTime = 0.5;
+    audio.play();
+    $('.blink').css('visibility', 'visible');
+    $('.eye-left').css('visibility', 'hidden');
+  });
+  
+  $('.wrapper').touchend(function() {
+    audio.pause();
+    audio.currentTime = 0.5;
+    $('.blink').css('visibility', 'hidden');
+    $('.eye-left').css('visibility', 'visible');
+  });
+} else {
+  $('.wrapper').mouseover(function() {
+    audio.currentTime = 0.5;
+    audio.play();
+    $('.blink').css('visibility', 'visible');
+    $('.eye-left').css('visibility', 'hidden');
+  });
+  
+  $('.wrapper').mouseout(function() {
+    audio.pause();
+    audio.currentTime = 0.5;
+    $('.blink').css('visibility', 'hidden');
+    $('.eye-left').css('visibility', 'visible');
+  });
+}
+
+// $(".wrapper").mouseover(function() {
+// audio.currentTime = 0.5;
+//   audio.play();
+// });
+
+// $(".wrapper").mouseout(function() {
+//   audio.pause();
+//   audio.currentTime = 0.5;
+// })
