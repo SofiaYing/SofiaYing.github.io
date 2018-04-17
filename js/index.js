@@ -1,10 +1,20 @@
 
 !function(){
+  let container = document.querySelector('#code');
+  let styleTag = document.querySelector('#styleTag');
   function writeCode(prefix,code,fn){
     //前缀，代码，回调
-    let container = document.querySelector('#code');
-    let styleTag = document.querySelector('#styleTag')
     let n=0;
+    
+    let skipAnime = document.getElementsByClassName('demo-1')[0];
+    skipAnime.addEventListener('click',function(){
+      if(n>= code.length){ return }
+      if(id){clearInterval(id)}
+      container.innerHTML = code;
+      styleTag.innerHTML = code;
+      container.scrollTop = container.scrollHeight;
+    },false);
+    
     let id = setInterval(()=>{
       n+=1;
       container.innerHTML = code.substring(0,n);
@@ -14,7 +24,7 @@
         window.clearInterval(id);
         fn && fn.call();
       }
-    },10)
+    },8)
   }
   let code = `
   /*欢迎来到sofia's home*/
@@ -120,6 +130,7 @@
   }
   /*这就是它!咦？好像很眼熟嘛？！*/
   /*用鼠标滑过它的胖脸试试？*/
+  /*或者拿出你的手指按住它的胖脸~~*/
   `
 
   writeCode('',code);
@@ -166,13 +177,3 @@ if(/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)){
     $('.eye-left').css('visibility', 'visible');
   });
 }
-
-// $(".wrapper").mouseover(function() {
-// audio.currentTime = 0.5;
-//   audio.play();
-// });
-
-// $(".wrapper").mouseout(function() {
-//   audio.pause();
-//   audio.currentTime = 0.5;
-// })
