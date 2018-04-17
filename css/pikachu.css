@@ -41,13 +41,14 @@ body {
   margin: auto; 
 }
 .blink {
+  /* 眨眼效果 */
+  visibility: hidden;
   position: absolute;
   width: 49px;  
   height: 49px;
   border-radius: 50%;
-  right:50%;
+  right: 50%;
   margin-right:90px;
-  top:49px;
+  top: 49px;
   border-top: 10px solid #483000;
-  visibility: hidden;
 }
