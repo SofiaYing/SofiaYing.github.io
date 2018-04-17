@@ -130,33 +130,11 @@ $('.wrapper').mouseover(function() {
   $('.eye-left').css('visibility', 'hidden');
 });
 
-$("wrapper").on("touchstart", function(e) {
-  // 判断默认行为是否可以被禁用
-  $('.blink').css('visibility', 'visible');
-  $('.eye-left').css('visibility', 'hidden');
-  if (e.cancelable) {
-      // 判断默认行为是否已经被禁用
-      if (!e.defaultPrevented) {
-          e.preventDefault();
-      }
-  }
-});
-
 $('.wrapper').mouseout(function() {
   $('.blink').css('visibility', 'hidden');
   $('.eye-left').css('visibility', 'visible');
 });
-$("wrapper").on("touchend", function(e) {
-  // 判断默认行为是否可以被禁用
-  $('.blink').css('visibility', 'hidden');
-  $('.eye-left').css('visibility', 'visible');
-  if (e.cancelable) {
-      // 判断默认行为是否已经被禁用
-      if (!e.defaultPrevented) {
-          e.preventDefault();
-      }
-  }
-});
+
 
 var audio = document.getElementsByTagName("audio")[0];
 $(".wrapper").mouseover(function() {
