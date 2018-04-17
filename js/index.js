@@ -70,7 +70,9 @@
   .eye-right {
     left: 50%;
     margin-left: 90px;
+    visibility: visible;
   }
+  
   /*还有高原红！哈哈！*/
   .face {
     width: 68px;
@@ -117,7 +119,29 @@
     transform: rotate(15deg);
   }
   /*这就是它!咦？好像很眼熟嘛？！*/
+  /*用鼠标滑过它的胖脸试试？*/
   `
 
   writeCode('',code);
 }.call()
+
+$('.wrapper').mouseover(function() {
+  $('.blink').css('visibility', 'visible');
+  $('.eye-left').css('visibility', 'hidden');
+});
+
+$('.wrapper').mouseout(function() {
+  $('.blink').css('visibility', 'hidden');
+  $('.eye-left').css('visibility', 'visible');
+});
+
+var audio = document.getElementsByTagName("audio")[0];
+$(".wrapper").mouseover(function() {
+audio.currentTime = 0.5;
+  audio.play();
+});
+
+$(".wrapper").mouseout(function() {
+  audio.pause();
+  audio.currentTime = 0.5;
+})
