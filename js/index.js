@@ -5,26 +5,63 @@
   function writeCode(prefix,code,fn){
     //前缀，代码，回调
     let n=0;
-    
-    let skipAnime = document.getElementsByClassName('demo-1')[0];
-    skipAnime.addEventListener('click',function(){
-      if(n>= code.length){ return }
-      if(id){clearInterval(id)}
-      container.innerHTML = code;
-      styleTag.innerHTML = code;
-      container.scrollTop = container.scrollHeight;
-    },false);
-    
-    let id = setInterval(()=>{
+    var duration = 100;
+    let id = setTimeout(function again(){
       n+=1;
       container.innerHTML = code.substring(0,n);
       styleTag.innerHTML = code.substring(0,n);
       container.scrollTop = container.scrollHeight;
-      if(n >= code.length){
-        window.clearInterval(id);
+      if(n<code.length){
+        id =setTimeout(again,duration);
+      }
+      else{
         fn && fn.call();
       }
-    },8)
+      //不用clear，因为调用一次之后自动clear。
+    },duration)
+
+    $('.actions').on("click","button",function(e){
+      let $button = $(e.currentTarget);    //获取正在监听的，这里是button
+      let speed = $button.attr('data-speed');
+      console.log(speed);
+      $button.addClass('active').siblings('.active').removeClass('active');
+      switch(speed){
+        case 'slow':
+        duration = 100;
+        break;
+        case 'quick':
+        duration = 10;
+        break;
+        case 'done':
+        //中断，不会重新开始window.clearTimeout(id);
+          container.innerHTML = code;
+          styleTag.innerHTML = code;
+          container.scrollTop = container.scrollHeight;
+          n=code.length;   //避免再次调用setTimeout
+        break;
+      }
+    })
+    // let skipAnime = document.getElementsByClassName('demo-1')[0];
+    // skipAnime.addEventListener('click',function(){
+    //   if(n>= code.length){ return }
+    //   if(id){clearInterval(id)}
+    //   container.innerHTML = code;
+    //   styleTag.innerHTML = code;
+    //   container.scrollTop = container.scrollHeight;
+    // },false);
+    //setInterval只会读取一次规定循环执行时间，所以要调速需要使用setTimeout
+    // let id = setInterval(()=>{
+    //   n+=1;
+    //   container.innerHTML = code.substring(0,n);
+    //   styleTag.innerHTML = code.substring(0,n);
+    //   container.scrollTop = container.scrollHeight;
+    //   if(n >= code.length){
+    //     window.clearInterval(id);
+    //     fn && fn.call();
+    //   }
+    // },8)
+    
+
   }
   let code = `
   /*欢迎来到sofia's home*/
@@ -132,9 +169,12 @@
   /*用鼠标滑过它的胖脸试试？*/
   /*或者拿出你的手指按住它的胖脸~~*/
   `
-
   writeCode('',code);
+
+
+  
 }.call()
+
 
 var audio = document.getElementsByTagName("audio")[0];
 
@@ -177,3 +217,5 @@ if(/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)){
     $('.eye-left').css('visibility', 'visible');
   });
 }
+
+

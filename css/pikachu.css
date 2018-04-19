@@ -52,3 +52,45 @@ body {
   top: 49px;
   border-top: 10px solid #483000;
 }
+ .actions{
+  position: absolute;
+  top : 130px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.actions button{
+  /* margin-top: 10px;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #fff090;
+  border-radius: 50%; */
+  margin-top: 10px;
+  font-size: 12px;
+  color: #a54c69;
+    background-image: -webkit-linear-gradient(top, #fff090, #e2b7b7);
+    background-image: linear-gradient(top, #f4f1ee, #fff);
+    border-radius: 50%;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px #f5edbf, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    float:left;
+    height: 50px;
+    /* position: relative; */
+    width: 50px;
+}
+.actions button:focus{
+  outline: none;
+}
+.actions button::-moz-focus-inner{
+  border: 0;
+}
+.actions .active{
+  background-image: -webkit-linear-gradient(top, #ecc4da, #e2afaf);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px #efcdcd, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  
+} 
+
+
+
+
+
+
