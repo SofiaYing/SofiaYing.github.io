@@ -23,28 +23,25 @@ body {
 }
 
 /* Color schemes */
-.demo-1 {
+.home-body {
 	--color-text: #333;
 	--color-bg: white;
 	--color-link: #cc85ac;
-	--color-link-hover: #333;
-	--color-info: #7239c0;
+	--color-link-hover:#7239c0;
 }
 
-.demo-2 {
+.demo-body{
 	--color-text: #333;
-	--color-bg: #fff;
-	--color-link: #d3482e;
-	--color-link-hover: #333;
-	--color-info: #333;
+	--color-bg: white;
+	--color-link: #5d93d8;
+	--color-link-hover:#326ab5;
 }
 
-.demo-3 {
+.about-body {
 	--color-text: #333;
 	--color-bg: #fff;
-	--color-link: #3860d0;
-	--color-link-hover: #333;
-	--color-info: #333;
+	--color-link: #b56761;
+	--color-link-hover: #964242;
 }
 
 /* Page Loader */
@@ -198,11 +195,6 @@ main {
 	font-weight: bold;
 	margin: 0 2em 0 0;
 	padding: 0.75em 0;
-}
-
-.info {
-	margin: 0 0 0 1.25em;
-	color: var(--color-info);
 }
 
 .github {

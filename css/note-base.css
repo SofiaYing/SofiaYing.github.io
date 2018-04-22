@@ -20,24 +20,14 @@ body {
 }
 
 /* Color schemes */
-.demo-adsila {
+.demo-body {
 	--color-text: #57585c;
 	--color-background: #fff;
 	--color-link: #5d93d8;
 	--color-link-hover: #423c2b;
 }
 
-/* Fade effect */
-.js body {
-	opacity: 0;
-	transition: opacity 0.3s;
-}
-
-.js body.render {
-	opacity: 1;
-}
-
-/* a {
+a {
 	text-decoration: none;
 	color: #5d93d8;
 	color: var(--color-link);
@@ -49,7 +39,7 @@ a:focus {
 	color: #423c2b;
 	color: var(--color-link-hover);
 	outline: none;
-} */
+}
 a {
 	text-decoration: none;
 	color: var(--color-link);
@@ -164,11 +154,6 @@ main {
 	font-weight: normal;
 	margin: 0;
 	padding: 0.75em 0;
-}
-
-.info {
-	margin: 0 0 0 1.25em;
-	color: var(--color-link-hover);
 }
 
 .github {

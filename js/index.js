@@ -27,10 +27,10 @@
       $button.addClass('active').siblings('.active').removeClass('active');
       switch(speed){
         case 'slow':
-        duration = 100;
+        duration = 80;
         break;
         case 'quick':
-        duration = 10;
+        duration = 8;
         break;
         case 'done':
         //中断，不会重新开始window.clearTimeout(id);
@@ -169,13 +169,11 @@
   /*用鼠标滑过它的胖脸试试？*/
   /*或者拿出你的手指按住它的胖脸~~*/
   `
-  writeCode('',code);
+  writeCode('',code,skipAnimate);
 
-
-  
 }.call()
 
-
+function skipAnimate(){
 var audio = document.getElementsByTagName("audio")[0];
 
 // 兼容移动端touchstart和touchend
@@ -216,6 +214,7 @@ if(/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)){
     $('.blink').css('visibility', 'hidden');
     $('.eye-left').css('visibility', 'visible');
   });
+}
 }
 
 
