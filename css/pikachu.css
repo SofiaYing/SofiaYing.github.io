@@ -84,11 +84,8 @@ body {
   height: 50px;
   /* position: relative; */
   width: 50px;
-}
-
-.actions button:focus {
   outline: none;
-  border:0;
+  border: 0;
 }
 
 .actions button::-moz-focus-inner {
